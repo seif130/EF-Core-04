@@ -12,10 +12,9 @@ namespace EF_core_04
 
         public int CustomerId { get; set; }
 
-        public Customer? Customer { get; set; }
+        public Customer Customer { get; set; }
 
-        public Account? Account { get; set; }
-
+        public Account Account { get; set; }
 
         public DateTime OwnershipDate { get; set; }
         public string OwnershipType { get; set; }
