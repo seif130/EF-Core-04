@@ -24,7 +24,7 @@ namespace EF_core_04
         [ForeignKey(nameof(Manager))]
         public int ManagerId { get; set; }
 
-        public ICollection<Account> Accounts { get; set; }
+        public ICollection<Account> Accounts { get; set; } = new List<Account>();
 
 
 
