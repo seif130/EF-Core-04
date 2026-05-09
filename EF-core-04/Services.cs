@@ -73,6 +73,7 @@ namespace EF_core_04
                 _context.SaveChanges();
 
                 Console.WriteLine("Customer added successfully!");
+                Console.WriteLine("your Id: " + customer.Id);
             }
             catch (Exception ex)
             {

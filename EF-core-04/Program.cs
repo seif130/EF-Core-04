@@ -44,6 +44,8 @@ namespace EF_core_04
 
 
 
+
+
             while (true)
             {
                 Console.Clear();
