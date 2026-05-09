@@ -24,8 +24,13 @@ namespace EF_core_04
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-   
-           modelBuilder.Entity<Account>()
+
+            modelBuilder.Entity<Branch>()
+    .HasOne(b => b.Manager)
+    .WithOne(m => m.Branch)
+    .HasForeignKey<Branch>(b => b.ManagerId);
+
+            modelBuilder.Entity<Account>()
                 .HasOne(a => a.Branch)
                 .WithMany(b => b.Accounts)
                 .HasForeignKey(a => a.BranchCode);
